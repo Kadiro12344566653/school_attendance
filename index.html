@@ -1515,10 +1515,11 @@ var App = (function () {
             state.sod = r.sod; state.sodAt = Date.now();
             if (r.today && r.today !== state.today) { state.today = r.today; onNewDay(); }
           } else throw new Error('boot');
-        }).catch(function () {
+        }).catch(function (e) {
           // الإنترنت موجود لكن خادم Google لا يجيب هذه الواجهة: التطبيق يعود لصفحة Google الأصلية
           if (navigator.onLine === false) return;
-          if (++tries < 2) { setTimeout(sync, 1500); return; }
+          var notApi = e && (e.name === 'SyntaxError' || /^HTTP|boot/.test(e.message || ''));   // ردّ ليس JSON = Code.gs قديم
+          if (!notApi && ++tries < 2) { setTimeout(sync, 1500); return; }
           try { if (window.AndroidApp && typeof window.AndroidApp.fallback === 'function') window.AndroidApp.fallback(); } catch (e) {}
         });
       };

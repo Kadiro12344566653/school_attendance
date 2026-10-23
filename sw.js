@@ -1,5 +1,5 @@
-/* دفتر الغيابات — يفتح فورا حتى مع إنترنت ضعيف. نسخة: e6bc0d9110 */
-var CACHE = 'daftar-e6bc0d9110';
+/* دفتر الغيابات — يفتح فورا حتى مع إنترنت ضعيف. نسخة: 33c7586381 */
+var CACHE = 'daftar-33c7586381';
 var SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png'];
 self.addEventListener('install', function (e) {
   self.skipWaiting();
