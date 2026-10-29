@@ -1,5 +1,5 @@
-/* دفتر الغيابات — يفتح فورا حتى مع إنترنت ضعيف. نسخة: 241fb28933 */
-var CACHE = 'daftar-241fb28933';
+/* دفتر الغيابات — يفتح فورا حتى مع إنترنت ضعيف. نسخة: 62587342e0 */
+var CACHE = 'daftar-62587342e0';
 var SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './fonts/tajawal-arabic-400-normal.woff2', './fonts/tajawal-arabic-700-normal.woff2', './fonts/tajawal-arabic-800-normal.woff2', './fonts/tajawal-latin-400-normal.woff2'];
 self.addEventListener('install', function (e) {
   self.skipWaiting();
